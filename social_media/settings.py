@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    ### third partry
+    ### third party
     
     ### internal
     'accounts',
@@ -108,7 +108,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static',]
+STATICFILES_DIRS = [BASE_DIR / 'static', BASE_DIR / "node_pkgs/node_modules",]
 STATIC_ROOT = BASE_DIR / 'static-cdn'
     
 # Media Files (image, video, ...)

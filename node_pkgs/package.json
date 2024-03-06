@@ -1,0 +1,39 @@
+{
+  "name": "node_pkgs",
+  "version": "1.0.0",
+  "description": "its node packages used for social media app in django.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "build": "npm run build:clean && npm run build:tailwind",
+    "build:clean": "rimraf ../static/css/dist",
+    "build:tailwind": "cross-env NODE_ENV=production tailwindcss --postcss -i ../static/css/tailwind/input.css -o ../static/css/tailwind/output.css --minify",
+    "dev": "cross-env NODE_ENV=development tailwindcss --postcss -i ../static/css/tailwind/input.css -o ../static/css/tailwind/output.css -w",
+    "tailwindcss": "node ./node_modules/tailwindcss/lib/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinasezza/social-media-django.git"
+  },
+  "keywords": [
+    "django",
+    "python",
+    "nodejs",
+    "tailwind"
+  ],
+  "author": "sinasezza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sinasezza/social-media-django/issues"
+  },
+  "homepage": "https://github.com/sinasezza/social-media-django#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.18",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "tw-elements": "^2.0.0"
+  }
+}
